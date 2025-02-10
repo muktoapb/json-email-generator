@@ -1,6 +1,6 @@
-# JSON Email Generator
+# JSON Domain Generator
 
-A lightweight Python tool for managing and generating JSON lists of email domains from text files.
+A lightweight Python tool for managing and generating JSON lists of domains from text files. Perfect for maintaining domain whitelists, blacklists, or any domain-based configurations.
 
 ## 🌟 Features
 
@@ -19,8 +19,8 @@ A lightweight Python tool for managing and generating JSON lists of email domain
 ## 📋 Installation
 
 ```bash
-git clone https://github.com/yourusername/json-email-generator.git
-cd json-email-generator
+git clone https://github.com/yourusername/json-domain-generator.git
+cd json-domain-generator
 ```
 
 No additional dependencies required! Works with Python 3.x
@@ -41,16 +41,16 @@ This command will:
 ## 📁 File Structure
 
 ```
-json-email-generator/
+json-domain-generator/
 ├── data/
 │   ├── input/                # Directory containing source txt files
-│   │   ├── email-list.txt   # Any domain list file
-│   │   └── emailist2.txt    # Another domain list file
+│   │   ├── domain-list.txt   # Any domain list file
+│   │   └── domainlist2.txt    # Another domain list file
 │   └── output/              # Directory containing generated JSON files
-│       ├── email-list.json       # Regular JSON output
-│       ├── email-list.min.json   # Minified JSON output
-│       ├── emailist2.json       # Regular JSON output
-│       └── emailist2.min.json   # Minified JSON output
+│       ├── domain-list.json       # Regular JSON output
+│       ├── domain-list.min.json   # Minified JSON output
+│       ├── domainlist2.json       # Regular JSON output
+│       └── domainlist2.min.json   # Minified JSON output
 └── src/
     └── main.py             # Main script for processing files
 ```
@@ -117,5 +117,5 @@ For more details, see the [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en
 
 ## 🙏 Acknowledgments
 
-- Thanks to all contributors who help maintain the email domain lists
-- Inspired by the need for reliable email domain validation
+- Thanks to all contributors who help maintain the domain lists
+- Inspired by the need for reliable domain validation

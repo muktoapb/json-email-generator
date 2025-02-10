@@ -5,8 +5,16 @@ import argparse
 from pathlib import Path
 from typing import List, Set, Dict
 
-class EmailDomainManager:
+class DomainManager:
+    """Process domain lists and generate JSON files.
+    
+    This class handles the conversion of domain lists from text files into JSON format,
+    supporting both regular and minified JSON outputs. It can process multiple input formats
+    and maintains a clean, sorted list of unique domains.
+    """
+    
     def __init__(self):
+        """Initialize paths for input and output directories."""
         self.base_dir = Path(__file__).parent.parent
         self.input_dir = self.base_dir / "data" / "input"
         self.output_dir = self.base_dir / "data" / "output"
@@ -131,14 +139,14 @@ class EmailDomainManager:
                 print(f"No new domains found in {txt_file.name}")
 
 def main():
-    parser = argparse.ArgumentParser(description='JSON Email Generator')
+    parser = argparse.ArgumentParser(description='JSON Domain Generator')
     parser.add_argument('command', choices=['make'])
     parser.add_argument('type', choices=['json'])
     
     args = parser.parse_args()
     
     if args.command == 'make' and args.type == 'json':
-        manager = EmailDomainManager()
+        manager = DomainManager()
         manager.process_all_files()
     else:
         print("Invalid command. Use 'make json' to process all files")
